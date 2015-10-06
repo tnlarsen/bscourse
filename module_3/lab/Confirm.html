@@ -1,49 +1,53 @@
 <html>
 <head>
-  <title>Bootstrap Course - Lab 3</title>
+	<title>Bootstrap Course - Lab 3</title>
 
-  <link href="Styles/bootstrap.min.css" rel="stylesheet">
+	<link href="Styles/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-<div id="submit-alert" class="alert alert-success" role="alert" hidden>Album submitted successfully</div>
+	
+
+	<div class="container">
+		<div id="submit-alert" class="alert alert-success" role="alert" hidden>Album submitted successfully</div>
 
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmModal">
-  Open dialog
-</button>
+		<div class="row">
+			<button type="button" class="col-md-offset-3 col-md-2 btn btn-primary" data-toggle="modal" data-target="#confirmModal">
+				Open dialog
+			</button>
+		</div>
+	</div>
+
+	<div class="modal" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+					<h4 class="modal-title" id="confirmModalLabel">Are you sure?</h4>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you wish to submit this album?</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="confirm-btn" data-dismiss="modal">Confirm</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-<div class="modal" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-        <h4 class="modal-title" id="confirmModalLabel">Are you sure?</h4>
-      </div>
-      <div class="modal-body">
-      <p>Are you sure you wish to submit this album?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary" id="confirm-btn" data-dismiss="modal">Confirm</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="Scripts/bootstrap.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="Scripts/bootstrap.min.js"></script>
-
- <script>
- 	$(function() {
-		$('#confirm-btn').click(function() {
-			$('#submit-alert').slideDown(300).delay(2000).slideUp(300)
-        })
- 	})
- </script>
+	<script>
+		$(function() {
+			$('#confirm-btn').click(function() {
+				$('#submit-alert').slideDown(300).delay(2000).slideUp(300)
+			})
+		})
+	</script>
 </body>
 </html>
