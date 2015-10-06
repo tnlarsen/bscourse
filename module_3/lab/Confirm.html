@@ -1,24 +1,23 @@
 <html>
 <head>
 	<title>Bootstrap Course - Lab 3</title>
-
 	<link href="Styles/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-	
-
 	<div class="container">
+		<!--A small alert to show when clicking confirm-->
 		<div id="submit-alert" class="alert alert-success" role="alert" hidden>Album submitted successfully</div>
 
 
 		<div class="row">
-			<button type="button" class="col-md-offset-3 col-md-2 btn btn-primary" data-toggle="modal" data-target="#confirmModal">
+			<!--The 'Open Dialog' button-->
+			<button type="button" class="col-sm-offset-5 col-sm-2 btn btn-primary" data-toggle="modal" data-target="#confirmModal">
 				Open dialog
 			</button>
 		</div>
 	</div>
 
+	<!--The actual modal dialog-->
 	<div class="modal" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -37,12 +36,11 @@
 		</div>
 	</div>
 
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="Scripts/bootstrap.min.js"></script>
 
 	<script>
+		// A bit of jquery to show and hide the alert
 		$(function() {
 			$('#confirm-btn').click(function() {
 				$('#submit-alert').slideDown(300).delay(2000).slideUp(300)
